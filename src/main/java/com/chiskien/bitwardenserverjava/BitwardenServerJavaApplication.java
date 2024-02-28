@@ -16,6 +16,9 @@ public class BitwardenServerJavaApplication {
 
     @Bean
     ApplicationRunner applicationRunner() {
-        return args -> log.info("Hello Bitwarden Server");
+        return args -> {
+            log.info("Hello Bitwarden Server");
+            log.info("{}", System.getenv().get("JAVA_HOME"));
+        };
     }
 }
