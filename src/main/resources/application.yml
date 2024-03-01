@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Bitwarden Server Java
+    name: bitwarden-server-java
 management:
   endpoints:
     web:
