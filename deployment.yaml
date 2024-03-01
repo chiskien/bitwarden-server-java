@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: BitwardenServerJava
+  labels:
+    app: BitwardenServerJava
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: BitwardenServerJava
+  template:
+    metadata:
+      name: BitwardenServerJava
+      labels:
+        app: BitwardenServerJava
+    spec:
+      containers:
+        - name: BitwardenServerJava
+          image: ghcr.io/chiskien/bitwarden-server-java
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      
